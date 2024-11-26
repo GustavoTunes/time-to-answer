@@ -1,0 +1,19 @@
+// Importar dependências do Bootstrap
+@import "bootstrap/scss/bootstrap"; // Bootstrap a partir de node_modules
+
+// Importar arquivos de estilo do SBAdmin 2
+@import "startbootstrap-sb-admin-2/css/sb-admin-2";
+@import "startbootstrap-sb-admin-2/scss/variables"; // Variáveis do SB Admin 2
+@import "startbootstrap-sb-admin-2/scss/buttons";   // Botões do SB Admin 2
+@import "startbootstrap-sb-admin-2/scss/utilities"; // Utilitários do SB Admin 2
+
+// Importar outras dependências do SB Admin 2 (opcionais)
+@import "startbootstrap-sb-admin-2/scss/cards";     // Cartões
+@import "startbootstrap-sb-admin-2/scss/charts";    // Estilos para gráficos (se necessário)
+
+// Importar recursos de bibliotecas externas
+@import "chart.js/dist/Chart"; // Chart.js
+@import "datatables.net-bs4/css/dataTables.bootstrap4"; // DataTables com Bootstrap 4
+
+// Seus estilos customizados
+//@import "custom"; // Adicione seus estilos personalizados
