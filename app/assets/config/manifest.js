@@ -6,5 +6,3 @@
 //= link jquery/dist/jquery.js
 //= link bootstrap/dist/js/bootstrap.js
 //= link chart.js/dist/Chart.js
-
-
