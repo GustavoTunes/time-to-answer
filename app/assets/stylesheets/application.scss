@@ -1,15 +1,30 @@
 // Importar dependências do Bootstrap
 @import "bootstrap/scss/bootstrap"; // Bootstrap a partir de node_modules
 
-// Importar arquivos de estilo do SBAdmin 2
+// Importar arquivos de estilo do SB Admin 2
 @import "startbootstrap-sb-admin-2/css/sb-admin-2";
 @import "startbootstrap-sb-admin-2/scss/variables"; // Variáveis do SB Admin 2
 @import "startbootstrap-sb-admin-2/scss/buttons";   // Botões do SB Admin 2
 @import "startbootstrap-sb-admin-2/scss/utilities"; // Utilitários do SB Admin 2
 
 // Importar outras dependências do SB Admin 2 (opcionais)
-@import "startbootstrap-sb-admin-2/scss/cards";     // Cartões
-@import "startbootstrap-sb-admin-2/scss/charts";    // Estilos para gráficos (se necessário)
+@import "startbootstrap-sb-admin-2/scss/cards";
+@import "startbootstrap-sb-admin-2/scss/charts";
+@import "startbootstrap-sb-admin-2/scss/dropdowns";
+@import "startbootstrap-sb-admin-2/scss/error";  
+@import "startbootstrap-sb-admin-2/scss/footer";  
+@import "startbootstrap-sb-admin-2/scss/login";    
+@import "startbootstrap-sb-admin-2/scss/mixins";   
+@import "startbootstrap-sb-admin-2/scss/navs";    
+@import "startbootstrap-sb-admin-2/scss/utilities";    
+@import "startbootstrap-sb-admin-2/scss/variables";    
+
+@import "startbootstrap-sb-admin-2/scss/navs/global";    
+@import "startbootstrap-sb-admin-2/scss/navs/sidebar";    
+@import "startbootstrap-sb-admin-2/scss/navs/topbar";  
+
+
+
 
 // Importar recursos de bibliotecas externas
 @import "chart.js/dist/Chart"; // Chart.js
