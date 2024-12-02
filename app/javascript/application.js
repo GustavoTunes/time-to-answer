@@ -6,5 +6,6 @@ import "bootstrap"
 import "@fortawesome/fontawesome-free"
 import "chart.js"
 import "startbootstrap-sb-admin-2"
-import "startbootstrap-sb-admin-2-css"
 import "jquery-easing"
+
+
