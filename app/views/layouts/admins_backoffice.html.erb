@@ -60,9 +60,10 @@
 
             <!-- Nav Item - Admins -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-users"></i>
-                <span>Administrators</span></a>
+              <%= link_to admins_backoffice_admins_index_path	, class: "nav-link" do %>
+              <i class="fas fa-fw fa-users"></i>
+              <span>Administrators</span></a>
+              <% end %>
             </li>
 
            
