@@ -8,7 +8,7 @@
 <% end %>
 
 <% if user_signed_in? %>
-    <p>User is logged in | <%= current_admin.email %></p>
+    <p>User is logged in | <%= current_user.email %></p>
 <% else %>
     <p>User not logged in</p>
 <% end %>
