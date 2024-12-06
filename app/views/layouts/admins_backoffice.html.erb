@@ -52,16 +52,17 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+              <%= link_to admins_backoffice_welcome_index_path, class: "nav-link" do %> 
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span>               
+              <% end %>
             </li>
 
             <!-- Nav Item - Admins -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>Administrators</span></a>
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-users"></i>
+                <span>Administrators</span></a>
             </li>
 
            
