@@ -14,8 +14,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     if @admin.update(params_admin)
       redirect_to admins_backoffice_admins_path, notice:"Administrator sucessfully updated!"
     else
-      redirect_to edit_admins_backoffice_admin_path(@admin)
-      #render :edit
+      #redirect_to edit_admins_backoffice_admin_path(@admin)
+      render :edit, status: :unprocessable_entity
     end     
   end
   
