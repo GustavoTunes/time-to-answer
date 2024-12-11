@@ -16,7 +16,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
       redirect_to admins_backoffice_admins_path, notice:"Administrator sucessfully created!"
     else
       render :new, status: :unprocessable_entity
-    end     
+    end
   end
 
   def edit

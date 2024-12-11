@@ -12,3 +12,4 @@ pin "fontawesome", to: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15
 pin "chart", to: "https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"
 pin "jquery-easing", to: "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
 pin "startbootstrap-sb-admin-2", to: "https://cdn.jsdelivr.net/npm/startbootstrap-sb-admin-2@4.1.4/js/sb-admin-2.min.js"
+pin "bootstrap-growl", to: "https://cdn.jsdelivr.net/npm/bootstrap-growl-ifightcrime@1.1.0/jquery.bootstrap-growl.min.js"

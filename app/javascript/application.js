@@ -9,3 +9,4 @@ import "bootstrap";
 import "fontawesome";
 import "chart";
 import "startbootstrap-sb-admin-2"
+import "bootstrap-growl"
