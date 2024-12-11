@@ -22,7 +22,7 @@
     <tbody>
       <% @admins.each do |admin| %>
         <tr>
-          <td><%= admin.id %></td>
+          <td class="id-column"><%= admin.id %></td>
           <td><%= admin.email %></td>
           <td class="text-center" style="width: 120px">
             <%= link_to edit_admins_backoffice_admin_path(admin), class:"btn btn-primary btn-circle btn-sm" do %>
@@ -36,4 +36,7 @@
       <% end %>
     </tbody>
   </table>
+  <div class="d-flex justify-content-center">
+    <%= paginate @admins %>
+  </div>
 </div>
