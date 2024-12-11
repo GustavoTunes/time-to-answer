@@ -10,7 +10,13 @@
       <tr>
         <th>#</th>
         <th>Email</th>
-        <th>Actions</th>
+        <th>
+          <div class="d-flex justify-content-center">
+            <%= link_to new_admins_backoffice_admin_path, class: "btn btn-success btn-circle btn-sm" do %>
+              <i class="fa fa-plus"></i>
+            <% end %>
+          </div>
+        </th>
       </tr>
     </thead>
     <tbody>
