@@ -45,7 +45,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   end
 
   def params_admin
-    params_admin = params.require(:admin).permit(:email, :password, :password_confirmation)
+    params.require(:admin).permit(:email, :password, :password_confirmation)
   end
 
   def verify_password
