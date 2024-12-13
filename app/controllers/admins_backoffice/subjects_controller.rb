@@ -48,4 +48,3 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   end
 
 end
-
