@@ -13,8 +13,7 @@ namespace :dev do
       show_spinner("Adding Extra Admins...") {%x(rails dev:add_extra_admins)}
       show_spinner("Adding Default User...") {%x(rails dev:add_default_user)}
       show_spinner("Adding Default Subjects...") {%x(rails dev:add_subjects)}
-      #show_spinner("Adding Default Questions...") {%x(rails dev:add_questions)}
-      #show_spinner("Adding Default Answers...") {%x(rails dev:add_answers)}
+      show_spinner("Adding Default Questions and answers...") {%x(rails dev:add_questions_answers)}
 
     else
       puts "Not on the development environment!"
@@ -57,6 +56,18 @@ namespace :dev do
    
     File.open(file_path, 'r').each do |line|
       Subject.create!(description: line.strip)
+    end
+  end
+
+  desc "Add default questions and answers"
+  task add_questions_answers: :environment do
+    Subject.all.each do |subject|
+      rand(5..10).times do |i|
+        Question.create!(
+          description: "#{Faker::Lorem.paragraph} #{Faker::Lorem.question}",
+          subject: subject
+          )
+      end
     end
   end
 
