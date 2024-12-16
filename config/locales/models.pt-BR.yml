@@ -42,5 +42,6 @@ pt-BR:
         updated_at: Atualizado em
   admin:
     dashboard: Painel do Administrador
-    user:
-      dashboard: Painel do Usuário
+  user:
+    dashboard: Painel do Usuário
+  submit: Enviar
