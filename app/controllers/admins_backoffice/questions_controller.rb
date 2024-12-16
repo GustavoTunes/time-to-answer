@@ -4,7 +4,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
 
   def index
-    @questions = Question.all.page(params[:page])
+    @questions = Question.includes(:subject)
+                         .order(:description)
+                         .page(params[:page])
   end
 
   def new
