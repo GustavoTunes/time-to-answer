@@ -7,6 +7,12 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
+      subject:
+        one: Assunto
+        other: Assuntos
+      question:
+        one: Pergunta
+        other: Perguntas
     attributes:
       admin:
         id: Código
@@ -22,3 +28,17 @@ pt-BR:
         password_confirmation: Confirmação da senha
         created_ad: Criado em
         updated_ad: Atualizado em
+      subject:
+        id: Código
+        description: Descrição
+        created_at: Criado em
+        updated_at: Atualizado em
+      question:
+        id: Código
+        description: Descrição
+        subject: Assunto
+        subject_id: Assunto
+        created_at: Criado em
+        updated_at: Atualizado em
+  admin:
+    dashboard: Painel do Administrador

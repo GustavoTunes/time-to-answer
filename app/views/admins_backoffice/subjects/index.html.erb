@@ -9,7 +9,7 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Description</th>
+        <th><%= translate_attribute(@subjects, :description) %></th>
         <th>
           <div class="d-flex justify-content-center">
             <%= link_to new_admins_backoffice_subject_path, class: "btn btn-success btn-circle btn-sm" do %>
