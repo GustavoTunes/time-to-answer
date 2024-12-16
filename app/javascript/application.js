@@ -10,3 +10,4 @@ import "fontawesome";
 import "chart";
 import "startbootstrap-sb-admin-2"
 import "bootstrap-growl"
+import "cocoon"
