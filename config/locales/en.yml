@@ -42,3 +42,5 @@ en:
         updated_at: Updated at
   admin:
     dashboard: Administrator Dashboard
+  user:
+    dashboard: User Dashboard

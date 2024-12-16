@@ -1,0 +1,4 @@
+en:
+  messages:
+    listing: "Listing %{model}"
+    confirm_with: "Are you sure you want to delete '%{item}' ?"
