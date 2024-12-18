@@ -60,8 +60,14 @@
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= current_user.email %>
             </a>
+            
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="userDropdown">
+
+              <%= link_to users_backoffice_welcome_index_path do %>
+                <i class="fas fa-user-alt fa-sm fa-fw mr-2" ></i> Profile
+              <% end %>
+              <div class="dropdown-divider"></div>
               <%= link_to destroy_user_session_path, data: { "turbo-method": :delete } do %>
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 logout-icon"></i> Logout
               <% end %>
@@ -82,12 +88,16 @@
     <!-- Scripts -->
     <%= javascript_importmap_tags %>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <% if notice %>
+      <%= javascript_tag do %>
+          $.bootstrapGrowl('<%= notice %>', {
+          type: 'success', // (null, 'info', 'error', 'success')
+          align: 'right', // ('left', 'right', or 'center')
+          allow_dismiss: true,
+          stackup_spacing: 10 // spacing between consecutively stacked growls.
+          });
+      <% end %>
+    <% end %>  
+
   </body>
 </html>
