@@ -1,11 +1,22 @@
-<% if admin_signed_in? %>
-    <p>Admin is logged in | <%= current_admin.email %> </p>
-<% else %>
-    <p>Admin not logged in</p>
+<% @questions.each do |question| %>
+  <div class="card shadow mb-4">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample-<%= question.id %>" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample-<%= question.id %>">
+      <h6 class="m-0 font-weight-bold text-primary"><%= question.description %></h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse" id="collapseCardExample-<%= question.id %>">
+      <div class="card-body">
+        <ul>
+          <% question.answers.each do |answer| %>
+            <li><%= answer.description %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 <% end %>
 
-<% if user_signed_in? %>
-    <p>User is logged in | <%= current_user.email %></p>
-<% else %>
-    <p>User not logged in</p>
-<% end %>
+<div class="d-flex justify-content-center">
+  <%= paginate @questions %>
+</div>
