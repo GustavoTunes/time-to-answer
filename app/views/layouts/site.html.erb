@@ -33,7 +33,7 @@
 
   </head>
 
-  <body class="side-margin">
+  <body class="justify-content-center mx-0">
 
     <nav class="navbar navbar-expand-lg navbar-light topbar mb-4 static-top shadow px-2 index_topbar">
       <div class="container-fluid">
@@ -51,7 +51,7 @@
         <div class="d-flex flex-grow-1 justify-content-center">
           <%= form_with(url: site_search_path, local: false, method: :get, class: "d-none d-sm-inline-block form-inline my-2 my-md-0 mw-100 navbar-search") do |form| %>
             <div class="input-group">
-              <%= form.text_field :term, class: "form-control bg-light border-0 small", placeholder: "Search for..." %>
+              <%= form.text_field :term, class: "form-control bg-light border-0", placeholder: "Search for..." %>
               <div class="input-group-append">
                 <button class="btn btn-light" type="submit">
                   <i class="fas fa-search fa-sm text-primary"></i>
@@ -60,6 +60,7 @@
             </div>
           <% end %>
         </div>
+
 
         <!-- User menu -->
         <div class="d-flex align-items-center justify-content-end">
@@ -95,20 +96,7 @@
       </div>
     </nav>
 
-
-    <main role="main" class="container">
-      <div class="jumbotron">
-        <% if admin_signed_in? %>
-          <p>Admin is logged in | <%= current_admin.email %> </p>
-        <% else %>
-          <p>Admin not logged in</p>
-        <% end %>
-        <% if user_signed_in? %>
-          <p>User is logged in | <%= current_user.email %></p>
-        <% else %>
-          <p>User not logged in</p>
-        <% end %>
-      </div>
+    <main role="main" class="container justify-content-center">
       <%= yield %>
     </main>
 
