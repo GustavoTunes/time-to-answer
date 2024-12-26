@@ -31,6 +31,7 @@
     <!-- Google Fonts from CDN -->
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap", rel: "stylesheet" %>
 
+    <%= javascript_importmap_tags %>
   </head>
 
   <body class="justify-content-center mx-0">
@@ -97,12 +98,13 @@
     </nav>
 
     <main role="main" class="container justify-content-center">
-      <%= yield %>
+      <%= turbo_frame_tag :main_frame do %>
+        <%= yield %>
+      <% end %>
     </main>
 
-    <!-- Scripts -->
-    <%= javascript_importmap_tags %>
 
+    <!-- Scripts -->
     <% if notice %>
       <%= javascript_tag do %>
           $.bootstrapGrowl('<%= notice %>', {

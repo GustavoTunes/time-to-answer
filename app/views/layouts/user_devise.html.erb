@@ -29,6 +29,7 @@
     <!-- SB Admin 2 CSS from CDN -->
     <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/startbootstrap-sb-admin-2@4.1.4/css/sb-admin-2.min.css", rel: "stylesheet" %>
 
+    <%= javascript_importmap_tags %>
 </head>
 
 <body class="bg-gradient-primary">
@@ -43,8 +44,6 @@
             </div>
         </div>
     </div>
-
-    <%= javascript_importmap_tags %>
 
     <% if flash %>
       <% flash.each do |key, value| %>
