@@ -30,6 +30,7 @@
     <!-- SB Admin 2 CSS from CDN -->
     <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/startbootstrap-sb-admin-2@4.1.4/css/sb-admin-2.min.css", rel: "stylesheet" %>
 
+    <%= javascript_importmap_tags %>
     </head>
 
     <body id="page-top">
@@ -41,12 +42,12 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">Time to Answer</div>
-                </a>
+                <%= link_to site_welcome_index_path, class:"sidebar-brand d-flex align-items-center justify-content-center" do %>
+                  <div class="sidebar-brand-icon rotate-n-15">
+                      <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="sidebar-brand-text mx-3">Time to Answer</div>
+                <% end %>
 
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
@@ -176,9 +177,6 @@
 
 
         <!-- Scripts -->
-        <%= javascript_importmap_tags %>
-
-
         <% if notice %>
           <%= javascript_tag do %>
               $.bootstrapGrowl('<%= notice %>', {
