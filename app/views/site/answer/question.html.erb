@@ -1,2 +1,5 @@
-<h1>Repostas</h1>
-<h2><%= params[:answer] %></h2>
+<% if @answer.correct%>
+  <h2 class= "correct_answer">Correct answer</h2>
+<% else %>
+  <h2 class= "wrong_answer">Wrong answer</h2>
+<% end%>
